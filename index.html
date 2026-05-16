@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi primera página web con HTML5 - Desafío Campuslands">
+    <meta name="author" content="Santiago Castro Peñaranda">
+    <title>Hola Chavales</title>
+</head>
+<body>
+
+    <!-- REPRODUCTOR DE AUDIO (UNDERTALE SOUNDTRACK) -->
+    <audio id="musica" loop>
+        <source src="sound/051. Another Medium (UNDERTALE Soundtrack) - Toby Fox.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="btn-musica" style="cursor: pointer; padding: 5px 10px; margin: 10px;">
+        🎵 Activar Música
+    </button>
+
+    <script>
+        const boton = document.getElementById('btn-musica');
+        const audio = document.getElementById('musica');
+    
+        boton.addEventListener('click', () => {
+            audio.play(); 
+            boton.style.display = 'none'; 
+        });
+    </script>
+
+
+    <header id="inicio">
+        <h1><em> Holi </em></h1>
+        <p>Esta es mi primera página web creada con HTML, oh cielos.</p>
+        <nav>
+            <a href="#sobremi">Sobre el chavalin</a> | 
+            <a href="#galeria">Galería-imagenes</a> | 
+            <a href="#multimedia">Videos</a> | 
+            <a href="#enlaces">Enlaces Útiles</a> | 
+            <a href="#mi-hobby">Mi Hobby (Desafío)</a> | 
+            <a href="#contacto">Contacto-creditos</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="sobremi"> 
+            <h2>Sobre mí</h2>
+            <p>
+                Soy un estudiante de desarrollo de Software en formación, y estoy aprendiendo cómo crear páginas
+                usando HTML y CSS, aunque hasta apenas estoy memorizando los términos. También me conocen como <strong>DARKSYLVEON777</strong>,
+                mi meta es irme de Cúcuta y volverme un escritor reconocido dentro del mundo tan lindo del desarrollo.
+            </p>
+            <img src="https://media.tenor.com/nSqi-7xExBMAAAAM/sanesss-sans.gif" alt="Imagen representativa animada de Sans de Undertale bailando" width="500">
+            <p>
+                <strong><em style="font-size: small;">"Imagen representativa del estudiante."</em></strong>
+            </p>
+        </section>
+
+
+        <section id="galeria">
+            <h2>Galería de imagenes</h2>
+
+            <figure>
+                <img src="images/arthur-morgan.jpg" alt="Retrato del personaje Arthur Morgan mirando fijamente" width="300">
+                <figcaption><strong><em style="font-size: small;">Viudo eterno de Arthur Morgan.</em></strong></figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/baba-is-you.jpg" alt="Portada oficial del videojuego de lógica Baba Is You" width="300">
+                <figcaption><strong><em style="font-size: small;">Odio este juego.</em></strong></figcaption>
+            </figure>
+        </section>
+
+        <section id="multimedia">
+            <h2>Contenido multimedia</h2>
+            <h3>Video local (El mejor canal de Youtube que proximamente sera una celebridad.)</h3>
+            <video src="video/0428.mp4" width="420" controls>
+                Tu navegador no soporta la reproducción de video.
+            </video>
+
+            <h3>Video externo desde YouTube (¡Arreglado e incrustado correctamente, (antes no servia profesor y si sigue sin servir que problema con ese video por dios.))</h3>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/BnnbP7pCIvQ"
+                title="Video de apoyo sobre Live server en Visual Studio Code"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <!-- SECCIÓN 4: ENLACES ADICIONALES -->
+        <!-- Cumple Criterio 3: Un enlace abre en la misma pestaña y el otro abre en una pestaña nueva -->
+        <section id="enlaces">
+            <h2>Enlaces Útiles</h2>
+            <!-- Abre en la misma pestaña -->
+            <p>Visita el buscador de <a href="https://www.google.com">Google</a></p>
+            <!-- Abre en pestaña nueva gracias a target="_blank" -->
+            <p>Aprende documentación en <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></p>
+        </section>
+
+        <!-- =================================== -->
+        <!-- SECCIÓN NUEVA: REQUISITO DEL DESAFÍO-->
+        <!-- =================================== -->
+        <!-- Cumple Criterio 8: Nueva sección con ID, h2, formato de texto (mark, strong, em, small), imagen local y enlace funcional -->
+        <section id="mi-hobby">
+            <h2>Mi Gran Pasión: La Escritura Creativa</h2>
+            <p>Además de pasar horas picando código en la pantalla, mi verdadera meta es convertirme en un <mark>escritor reconocido</mark>. Me encanta inventar historias complejas y desarrollar personajes profundos.</p>
+            <p>Pienso que la programación y la literatura se parecen mucho: ambas consisten en construir mundos enteros a partir de una hoja en blanco, cuidando cada <strong>pequeño</strong> <em>detalle</em> de la estructura.</p>
+            
+            <!-- Imagen local obligatoria del desafío -->
+            <img src="images/escritura.jpg" alt="Libro abierto con anotaciones y una pluma clásica encima" width="400">
+            
+            <p>Puedes leer excelentes consejos de narrativa visitando el portal de <a href="https://www.wattpad.com" target="_blank">Wattpad</a>.</p>
+        </section>
+
+    </main>
+
+    <!-- =================================== -->
+    <!-- SECCIÓN: PIE DE PÁGINA              -->
+    <!-- =================================== -->
+    <!-- Cumple Criterio 6: footer semántico cerrando el ciclo del documento -->
+    <footer id="contacto">
+        <p>Gracias por ver!</p>
+        <p>Creado por: Santiago Castro Peñaranda - 2026</p>
+        <p>Contacto: c3strosantiago@gmail.com</p>
+        <p><a href="#inicio">Volver arriba ↑</a></p>
+    </footer>
+
+</body>
+</html>
